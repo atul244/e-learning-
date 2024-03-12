@@ -1,0 +1,681 @@
+/*styling.css*/
+/*Body:
+-Give the body element a relative position for the scrollspy to work.
+-Add a font family to the whole page */
+body{
+    font-family: 'Vollkorn', sans-serif;
+    position: relative;
+}
+/*Video:
+-Set the video as background, make it fixed.
+-make sure it appears behind all elements.
+-make it spread across the whole webpage*/
+video#bgvideo{
+    position: fixed;
+    min-height: 100%;
+    min-width: 100%;
+    z-index: -100;
+}
+
+/*Video does not work in small devices:
+-Hide the video and set picture as background (use media queries)
+-make it spread accross the whole webpage*/
+@media (max-device-width:768px){
+    body{
+        background: url("http://res.cloudinary.com/dfqddpjfl/video/upload/v1498777628/nature_video_ntgv60.mp4") center center fixed;
+        background-size: cover;
+    }
+    #bgvideo{
+        display: none;   
+    }
+}
+
+/*Style the Home section and elements inside it: 
+-reduce the margin-bottom of h1 and h2.
+-style the button and its hover state*/
+#home{
+    background-color: transparent;
+    color: #fff;
+    text-align: center;
+    padding-top: 4%;
+}
+#home h1{
+    margin-bottom: 30px;   
+}
+#home h2{
+    margin-bottom: 50px;   
+}
+#home .btn{
+    background-color: rgb(29, 167, 179);
+    color: #fff;
+    font-size: 20px;
+    padding: 8px 20px;
+    border-radius: 8px;
+}
+#home .btn:hover{
+    background-color: rgba(29, 167, 179, 0.5);
+}
+
+/*Style the About section: 
+-add padding-top so that the nav link is active before the carousel hits the top border of the page-
+-Limit its width in big devices to 1000px-
+-make headings bold and set the dimensions of pictures */
+.container{
+    max-width: 1000px;   
+}
+#about{
+    color: #fff;
+    text-align: center;
+    padding-top: 100px;
+}
+#about h2{
+    font-weight: bold;
+}
+#about p{
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+.aboutImage{
+    height: 120px;   
+}
+
+/*Style the promise section: 
+-add padding-top for early activation of the nav link.
+-set the width of the carousel and center it
+-set the height of pictures and center them inside the carousel items
+-Move the carousel caption under the pictures
+*/
+#promise{
+    padding-top: 100px;   
+}
+#myCarousel{
+    width: 60%;
+    margin: 0 auto;
+}
+.carousel-inner .item img{
+    height: 400px; 
+    margin: 0 auto;
+}
+
+.carousel-caption{
+    position: relative;
+    left: auto;
+    right: auto;
+    height: 200px;
+}
+
+
+/*Style the pictures and nav-brand for different screens*/
+@media (max-width:768px){
+    .carousel-inner .item img{
+        height: 300px;   
+    }
+    .carousel-inner h2{
+        font-size: 23px;   
+    }
+}
+@media (max-width:400px){
+    .carousel-inner .item img{
+        height: 200px;   
+    }
+    .carousel-inner h2{
+        font-size: 17px;   
+    }
+    .navbar-brand{
+        font-size: 12px;   
+    }
+}
+/*Style the footer*/
+.footer{
+    background-color: rgba(29,167,179,0.1);
+    color: #fff;
+    padding: 10px 0;
+    margin-top: 150px;
+    font-size: 15px;
+}
+
+
+/*Style the navigation bar using a navbar css generator*/
+
+.navbar-custom {
+  font-size: 18px;
+  background-color: #1b3759;
+  border-color: #132740;
+  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#274f80), to(#1b3759));
+  background-image: -webkit-linear-gradient(top, #274f80, 0%, #1b3759, 100%);
+  background-image: -moz-linear-gradient(top, #274f80 0%, #1b3759 100%);
+  background-image: linear-gradient(to bottom, #274f80 0%, #1b3759 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff274f80', endColorstr='#ff1b3759', GradientType=0);
+}
+.navbar-custom .navbar-brand {
+  color: #fff;
+}
+.navbar-custom .navbar-brand:hover,
+.navbar-custom .navbar-brand:focus {
+  color: #fff;
+  background-color: transparent;
+}
+.navbar-custom .navbar-text {
+  color: #c0c0c0;
+}
+.navbar-custom .navbar-nav > li:last-child > a {
+  border-right: 1px solid #132740;
+}
+.navbar-custom .navbar-nav > li > a {
+  color: #c0c0c0;
+  border-left: 1px solid #132740;
+}
+.navbar-custom .navbar-nav > li > a:hover,
+.navbar-custom .navbar-nav > li > a:focus {
+  color: #ffffff;
+  background-color: transparent;
+}
+.navbar-custom .navbar-nav > .active > a,
+.navbar-custom .navbar-nav > .active > a:hover,
+.navbar-custom .navbar-nav > .active > a:focus {
+  color: #ffffff;
+  background-color: #132740;
+  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#132740), to(#1f3f67));
+  background-image: -webkit-linear-gradient(top, #132740, 0%, #1f3f67, 100%);
+  background-image: -moz-linear-gradient(top, #132740 0%, #1f3f67 100%);
+  background-image: linear-gradient(to bottom, #132740 0%, #1f3f67 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff132740', endColorstr='#ff1f3f67', GradientType=0);
+}
+.navbar-custom .navbar-nav > .disabled > a,
+.navbar-custom .navbar-nav > .disabled > a:hover,
+.navbar-custom .navbar-nav > .disabled > a:focus {
+  color: #cccccc;
+  background-color: transparent;
+}
+.navbar-custom .navbar-toggle {
+  border-color: #dddddd;
+}
+.navbar-custom .navbar-toggle:hover,
+.navbar-custom .navbar-toggle:focus {
+  background-color: #dddddd;
+}
+.navbar-custom .navbar-toggle .icon-bar {
+  background-color: #cccccc;
+}
+.navbar-custom .navbar-collapse,
+.navbar-custom .navbar-form {
+  border-color: #13263e;
+}
+.navbar-custom .navbar-nav > .dropdown > a:hover .caret,
+.navbar-custom .navbar-nav > .dropdown > a:focus .caret {
+  border-top-color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+.navbar-custom .navbar-nav > .open > a,
+.navbar-custom .navbar-nav > .open > a:hover,
+.navbar-custom .navbar-nav > .open > a:focus {
+  background-color: #132740;
+  color: #ffffff;
+}
+.navbar-custom .navbar-nav > .open > a .caret,
+.navbar-custom .navbar-nav > .open > a:hover .caret,
+.navbar-custom .navbar-nav > .open > a:focus .caret {
+  border-top-color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+.navbar-custom .navbar-nav > .dropdown > a .caret {
+  border-top-color: #c0c0c0;
+  border-bottom-color: #c0c0c0;
+}
+@media (max-width: 767) {
+  .navbar-custom .navbar-nav .open .dropdown-menu > li > a {
+    color: #c0c0c0;
+  }
+  .navbar-custom .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-custom .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #ffffff;
+    background-color: transparent;
+  }
+  .navbar-custom .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-custom .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-custom .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #ffffff;
+    background-color: #132740;
+  }
+  .navbar-custom .navbar-nav .open .dropdown-menu > .disabled > a,
+  .navbar-custom .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+  .navbar-custom .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+    color: #cccccc;
+    background-color: transparent;
+  }
+}
+.navbar-custom .navbar-link {
+  color: #c0c0c0;
+}
+.navbar-custom .navbar-link:hover {
+  color: #ffffff;
+}
+
+
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  --html-color: #56cfe1;
+  --css-color: #4ea8de;
+  --js-color: #5e60ce;
+  --light: white;
+  --light-grey: rgba(255, 255, 255, 0.7);
+  --dark: #050505;
+  --header: #dbdbdb;
+  --bg: #f0f0f0;
+  --text: var(--dark);
+  --text-hover: var(--text);
+  --slide: cubic-bezier(0.59, 0.01, 0.48, 1);
+  --mode-hover: #203297;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Muli", sans-serif;
+  width: 100vw;
+  background: var(--bg);
+  overflow-x: hidden;
+  transition: background 150ms;
+}
+
+section {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: translateX(150%);
+  display: none;
+}
+
+.main-section {
+  transform: translateX(0px);
+  display: block;
+}
+
+
+
+
+
+.mode-switch:hover {
+  color: var(--mode-hover);
+}
+
+.courses {
+  width: 100%;
+  padding: 61px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.course {
+  margin-top: 20px;
+  display: flex;
+  width: 70%;
+  max-width: 800px;
+  height: 200px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: relative;
+}
+
+.course-info {
+  width: 100%;
+  height: 100%;
+  color: var(--light);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  transition: width 550ms var(--slide);
+}
+
+.course.html .course-info {
+  background: var(--html-color);
+}
+
+.course.css .course-info {
+  background: var(--css-color);
+}
+
+.course.js .course-info {
+  background: var(--js-color);
+}
+
+.course:hover .course-info,
+.course:focus-within .course-info {
+  width: 35%;
+}
+
+.course-info span {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--light-grey);
+  margin-bottom: 12px;
+}
+
+.course-info h5 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.course-info a {
+  color: var(--light-grey);
+  text-decoration: none;
+  transition: 150ms color;
+  position: absolute;
+  bottom: 25px;
+  left: 30px;
+}
+
+.course-more .chapters {
+  color: var(--dark);
+  text-decoration: none;
+  transition: 150ms color;
+  position: absolute;
+  bottom: 25px;
+  left: 30px;
+  display: none;
+}
+
+.course-info a:hover {
+  color: var(--light);
+}
+
+.course-info i {
+  font-size: 14px;
+}
+
+.course-more {
+  width: 65%;
+  height: 100%;
+  background: var(--light);
+  color: var(--dark);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 30px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+  z-index: 10;
+  transform: translateX(100%);
+  transition: transform 550ms var(--slide);
+}
+
+.course:hover .course-more,
+.course:focus-within .course-more {
+  transform: translateX(0);
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.details > h5 {
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.course.html .details > h5 {
+  color: var(--html-color);
+}
+
+.course.css .details > h5 {
+  color: var(--css-color);
+}
+
+.course.js .details > h5 {
+  color: var(--js-color);
+}
+
+.progress {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.progress-bar {
+  border-radius: 8px;
+  height: 6px;
+  width: 200px;
+  background: rgba(200, 200, 200, 0.8);
+  position: relative;
+}
+
+.progress-bar span {
+  height: 6px;
+  position: absolute;
+  border-radius: 8px;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.course.html .progress-bar span {
+  background: var(--html-color);
+}
+
+.course.css .progress-bar span {
+  background: var(--css-color);
+}
+
+.course.js .progress-bar span {
+  background: var(--js-color);
+}
+
+.progress-text {
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 5px;
+  color: var(--dark);
+}
+
+.name {
+  font-size: 28px;
+  margin-top: 4px;
+}
+
+.description {
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+.time {
+  opacity: 0.3;
+  font-weight: 600;
+}
+
+.continue-btn,
+.read-btn {
+  align-self: flex-end;
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+  font-size: 15px;
+  border-radius: 20px;
+  padding: 8px 16px;
+  color: var(--light);
+  text-decoration: none;
+  transition: opacity 150ms;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.course.html .continue-btn,
+.course.html .read-btn {
+  background: var(--html-color);
+}
+
+.course.css .continue-btn,
+.course.css .read-btn {
+  background: var(--css-color);
+}
+
+.course.js .continue-btn,
+.course.js .read-btn {
+  background: var(--js-color);
+}
+
+.continue-btn:hover,
+.read-btn:hover {
+  opacity: 0.8;
+}
+
+.course .read-btn.mark {
+  transform: translateX(-80px);
+  background: #6ad474;
+}
+
+.course::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #6ad474;
+  z-index: 50;
+  opacity: 0;
+  transform: translateX(50px);
+  transition: transform 200ms ease-in-out, opacity 200ms;
+}
+
+.course::after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  width: 15px;
+  height: 7px;
+  border-left: 4px solid white;
+  border-bottom: 4px solid white;
+  z-index: 55;
+  opacity: 0;
+  transform: translate(35px, 8px) rotate(-45deg);
+  transition: transform 200ms ease-in-out, opacity 200ms;
+}
+
+.course.checked::before {
+  transform: translateX(0px);
+  opacity: 1;
+}
+
+.course.checked::after {
+  transform: translate(-5px, 8px) rotate(-45deg);
+  opacity: 1;
+}
+
+.reference {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  margin-top: 15px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  color: var(--text);
+}
+
+.note {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  margin-top: 15px;
+  font-size: 20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  color: var(--text);
+}
+
+.reference a {
+  color: #118ab2;
+  text-decoration: none;
+}
+
+.back {
+  color: var(--text);
+  position: relative;
+  top: 15px;
+  left: 20px;
+  cursor: pointer;
+  transition: color 150ms;
+}
+
+.back:hover {
+  color: var(--text-hover);
+}
+
+@media screen and (max-width: 950px) {
+  .course {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .course-more {
+    width: 100%;
+  }
+  .course-more .chapters {
+    display: block;
+  }
+  .course-info a {
+    display: none;
+  }
+  .course:hover .course-info {
+    width: 100%;
+  }
+}
+
+.overlay {
+  background: var(--header);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 900;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 500ms var(--slide);
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+.overlay-message {
+  font-size: 30px;
+  font-weight: 600;
+  opacity: 0;
+  color: var(--text);
+  transition: opacity 250ms;
+  text-align: center;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+        <title>Contact us Page</title>
+    <link rel="stylesheet" href="contact.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        
+         
+        <!--Icon link boxicon-->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+            <header class="navbar">
+           
+                <a class="logo" href="home.html"><i class='bx bx-book-reader'></i>Edubird</a>
+           
+            <nav class="bar">
+               
+            <a href="home.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="courses.html">COURSES</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+           <a href="user.html" class="icon" id="user">
+        <i class='bx bxs-user'></i>
+    </a>
+        <div class="icon" id="menu" href=""><i class='bx bx-menu'></i></div>
+        </header>
+    <div class="background"></div>
+    <div class="phone">
+        <div class="container">
+            <h1>Korean Language Learning Adventure</h1>
+            <div id="game-container">
+                <div id="question-container">
+                    <p id="question"></p>
+                </div>
+                <div id="options-container"></div>
+            </div>
+            <button id="submit-btn" onclick="checkAnswer()">Submit Answer</button>
+            <p id="feedback"></p>
+            <button id="retry-btn" onclick="resetGame()">Retry</button>
+            <div id="progress-bar-container">
+                <div id="progress-bar"></div>
+            </div>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>

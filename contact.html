@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us Page</title>
+    <link rel="stylesheet" href="contact.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        
+         
+        <!--Icon link boxicon-->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+        <header class="navbar">
+           
+                <a class="logo" href="home.html"><i class='bx bx-book-reader'></i>Edubird</a>
+           
+            <nav class="bar">
+               
+            <a href="home.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="courses.html">COURSES</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+            <a href="user.html" class="icon" id="user">
+        <i class='bx bxs-user'></i>
+    </a>
+        <div class="icon" id="menu" href=""><i class='bx bx-menu'></i></div>
+        </header>
+    <div class="form-main">
+        <div class="main-wrapper">
+            <h2 class="form-head">Contact Form</h2>
+            <form class="form-wrapper" onsubmit="submitForm(event)">
+                <div class="form-card">
+                    <input
+                        class="form-input"
+                        type="text"
+                        name="full_name"
+                        required="required"
+                    />
+                    <label class="form-label" for="full_name">Full Name</label>
+                </div>
+
+                <div class="form-card">
+                    <input
+                        class="form-input"
+                        type="email"
+                        name="email"
+                        required="required"
+                    />
+                    <label class="form-label" for="email">Email</label>
+                </div>
+
+                <div class="form-card">
+                    <input
+                        class="form-input"
+                        type="number"
+                        name="phone_number"
+                        required="required"
+                    />
+                    <label class="form-label" for="phone_number">Phone number</label>
+                </div>
+
+                <div class="form-card">
+                    <textarea
+                        class="form-textarea"
+                        maxlength="420"
+                        rows="3"
+                        name="address"
+                        required="required"
+                    ></textarea>
+                    <label class="form-textarea-label" for="address">Address</label>
+                </div>
+
+                <div class="btn-wrap">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <!-- Your footer content goes here -->
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function submitForm(event) {
+            // Prevent the default form submission
+            event.preventDefault();
+
+            // Your form validation logic goes here, if needed
+
+            // Replace 'your-destination-url' with the URL you want to redirect to
+            window.location.href = 'file:///D:/edubird/thanq.html';
+        }
+    </script>
+</body>
+
+</html>
